@@ -2079,7 +2079,7 @@ a {
 }
 .cid-umqFTzcIKg .main_wrapper {
   position: relative;
-  height: 800px;
+  height: 1000px;
   width: 100%;
 }
 .cid-umqFTzcIKg .b_wrapper {
@@ -2169,6 +2169,10 @@ a {
   .cid-umqFTzcIKg .google-map {
     position: static;
   }
+}
+.cid-umqFTzcIKg .list,
+.cid-umqFTzcIKg .item-wrap {
+  color: #ffffff;
 }
 .cid-umqFTzdyKr {
   padding-top: 5rem;
