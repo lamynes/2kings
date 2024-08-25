@@ -1656,7 +1656,11 @@ a {
 .cid-umqFTzaMGq {
   padding-top: 5rem;
   padding-bottom: 3rem;
-  background-color: #232323;
+  background-image: url("../../../assets/images/re-striping-a-parking-lot-2000x1333.webp");
+}
+.cid-umqFTzaMGq .mbr-overlay {
+  background: #ffffff;
+  opacity: 0.3;
 }
 .cid-umqFTzaMGq .item-subtitle {
   line-height: 1.2;
@@ -1689,7 +1693,7 @@ a {
   margin-top: auto !important;
 }
 .cid-umqFTzaMGq .mbr-section-title {
-  color: #ffffff;
+  color: #000000;
 }
 .cid-umqFTzaMGq .mbr-text,
 .cid-umqFTzaMGq .mbr-section-btn {
@@ -1771,7 +1775,7 @@ a {
   }
 }
 .cid-umqFTzb9N5 .item-wrapper {
-  background: #757b62;
+  background: #232323;
   padding: 2.25rem;
   height: 100%;
   display: flex;
@@ -1821,10 +1825,12 @@ a {
 .cid-umqFTzb9N5 .card-title,
 .cid-umqFTzb9N5 .iconfont-wrapper {
   text-align: center;
+  color: #a6a99c;
 }
 .cid-umqFTzb9N5 .card-text,
 .cid-umqFTzb9N5 .item .mbr-section-btn {
   text-align: center;
+  color: #edefeb;
 }
 .cid-umqFTzccqz {
   padding-top: 5rem;
