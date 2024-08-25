@@ -1572,8 +1572,8 @@ a {
   max-width: 800px;
 }
 .cid-umqFTz99pH {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
   background-color: #232323;
 }
 .cid-umqFTz99pH .item:focus,
@@ -1649,6 +1649,9 @@ a {
 }
 .cid-umqFTz99pH .grid-container-2 {
   align-items: flex-start;
+}
+.cid-umqFTz99pH .mbr-section-subtitle {
+  color: #ffffff;
 }
 .cid-umqFTzaMGq {
   padding-top: 5rem;
