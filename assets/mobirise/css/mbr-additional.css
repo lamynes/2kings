@@ -1748,7 +1748,6 @@ a {
 .cid-umqFTzb9N5 {
   padding-top: 5rem;
   padding-bottom: 3rem;
-  background-color: #ffffff;
 }
 .cid-umqFTzb9N5 .mbr-fallback-image.disabled {
   display: none;
@@ -1761,6 +1760,7 @@ a {
   height: 100%;
   position: absolute;
   top: 0;
+  background-image: url("../../../assets/images/newarc-ai-gr-qicvlsqo2ylnlfgqzsihyfpehclps5y5-1232x807.webp");
 }
 .cid-umqFTzb9N5 .item-mb {
   margin-bottom: 2rem;
