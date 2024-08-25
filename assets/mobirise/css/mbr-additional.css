@@ -879,7 +879,7 @@ a {
   height: 90px;
   padding: 0.5rem 0.6rem;
   flex-wrap: nowrap;
-  background: rgba(117, 123, 98, 0.8) !important;
+  background: rgba(35, 35, 35, 0.8) !important;
   left: 0;
   right: 0;
   -webkit-box-pack: justify;
@@ -891,7 +891,7 @@ a {
   align-items: center;
   border-radius: 100vw;
   margin-top: 1rem;
-  background-color: #757b62;
+  background-color: #232323;
   box-shadow: 0 30px 60px 0 rgba(27, 31, 10, 0.08);
   border-radius: 4px !important;
 }
@@ -921,8 +921,8 @@ a {
   border-radius: 1.5rem;
   transition: 0.3s all !important;
   min-width: auto;
-  background: #757b62;
-  background: rgba(117, 123, 98, 0.8) !important;
+  background: #232323;
+  background: rgba(35, 35, 35, 0.8) !important;
   border-radius: 4px !important;
 }
 .cid-umqFTz6x9J .nav-item:focus,
@@ -1087,7 +1087,7 @@ a {
   padding: 0.667em 1.667em;
 }
 .cid-umqFTz6x9J .navbar.navbar-expand-lg .dropdown .dropdown-menu {
-  background: #757b62;
+  background: #232323;
 }
 .cid-umqFTz6x9J .navbar.navbar-expand-lg .dropdown .dropdown-menu .dropdown-submenu {
   margin: 0;
@@ -1251,10 +1251,10 @@ a {
     width: 100%;
     padding: 1rem;
     border-radius: 1.5rem;
-    background: #757b62;
+    background: #232323;
     opacity: 1;
-    border-color: rgba(117, 123, 98, 0.8) !important;
-    background: rgba(117, 123, 98, 0.8) !important;
+    border-color: rgba(35, 35, 35, 0.8) !important;
+    background: rgba(35, 35, 35, 0.8) !important;
     backdrop-filter: blur(8px);
     border-radius: 4px !important;
   }
@@ -1540,7 +1540,7 @@ a {
 .cid-umqFTz99pH {
   padding-top: 6rem;
   padding-bottom: 6rem;
-  background-color: #ffffff;
+  background-color: #232323;
 }
 .cid-umqFTz99pH .item:focus,
 .cid-umqFTz99pH span:focus {
@@ -2007,7 +2007,7 @@ a {
 .cid-umqFTzc56G {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: #ffffff;
+  background-color: #232323;
 }
 .cid-umqFTzc56G .item-subtitle {
   line-height: 1.2;
@@ -2037,7 +2037,7 @@ a {
   flex-flow: column nowrap;
 }
 .cid-umqFTzc56G .mbr-section-title {
-  color: #000000;
+  color: #ffffff;
 }
 .cid-umqFTzc56G .mbr-text,
 .cid-umqFTzc56G .mbr-section-btn {
@@ -2113,7 +2113,7 @@ a {
 }
 .cid-umqFTzcIKg .item-wrapper {
   height: 100%;
-  background-color: #ffffff;
+  background-color: rgba(35, 35, 35, 0.28);
   pointer-events: fill;
   padding: 2.25rem;
 }
