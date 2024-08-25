@@ -259,7 +259,7 @@
         "css": "'Onest', sans-serif"
       }
     ],
-    "uniqCompNum": 8,
+    "uniqCompNum": 13,
     "imageResize": true,
     "screenshot": "screenshot.png",
     "publishChangesOnly": true,
@@ -1023,7 +1023,7 @@
               }
             }
           },
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"menu menu2\" group=\"Menu\" plugins=\"DropDown, TouchSwipe\" always-top global once=\"menu\" not-draggable position-absolute>\n\t<mbr-parameters>\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Logo\" name=\"showLogo\" checked>\n\t\t<input type=\"range\" title=\"Logo Size\" inline name=\"logoSize\" min=\"1\" max=\"5\" step=\"0.1\" value=\"5\" condition=\"showLogo\">\n\t\t<input type=\"checkbox\" title=\"Brand Name\" name=\"showBrand\" checked>\n\t\t<input type=\"checkbox\" title=\"Menu Items\" name=\"showItems\" checked>\n\t\t<select title=\"Menu Items Align\" name=\"contentAlign\" condition=\"showItems\">\n\t\t\t<option value=\"1\">Left</option>\n\t\t\t<option value=\"2\" selected>Center</option>\n\t\t\t<option value=\"3\">Right</option>\n\t\t</select>\n\t\t<input type=\"checkbox\" title=\"Icons\" name=\"showIcons\">\n\t\t<select title=\"Amount\" name=\"iconsAmount\" condition=\"showIcons\">\n\t\t\t<option value=\"1\">1</option>\n\t\t\t<option value=\"2\">2</option>\n\t\t\t<option value=\"3\" selected>3</option>\n\t\t\t<option value=\"4\">4</option>\n\t\t</select>\n\t\t<input type=\"color\" title=\"Icons Color\" name=\"iconsColor\" value=\"#000000\" condition=\"showIcons\">\n\t\t<input type=\"checkbox\" title=\"Button\" name=\"showButtons\" checked>\n\t\t<header>Styles</header>\n\t\t<input type=\"checkbox\" title=\"Collapsed\" name=\"collapsed\">\n\t\t<input type=\"checkbox\" title=\"Transparent\" name=\"transparent\" checked>\n\t\t<input type=\"checkbox\" title=\"Sticky\" name=\"sticky\" checked>\n\t\t<input type=\"range\" title=\"Opacity\" name=\"opacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"transparent\">\n\t\t<input type=\"color\" title=\"Color\" name=\"menuBgColor\" value=\"#232323\">\n\t\t<input type=\"color\" title=\"Hamburger\" name=\"hamburgerColor\" value=\"#ffffff\">\n\t</mbr-parameters>\n\n\t<nav class=\"navbar navbar-dropdown\" mbr-class=\"{'navbar-fixed-top':sticky,\n                     'navbar-expand-lg':!collapsed,\n                     'collapsed':collapsed}\">\n\t\t<div class=\"container\">\n\t\t\t<div class=\"navbar-brand\">\n\t\t\t\t<span mbr-if=\"showLogo\" class=\"navbar-logo\">\n\t\t\t\t\t<a href=\"index.html\">\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/newarc_ai_gr_qicvlsqo2ylnlfgqzsihyfpehclps5y5-1232x848.jpg\" alt=\"2 Kings Asphalt\" mbr-style=\"{'height': logoSize + 'rem'}\">\n\t\t\t\t\t</a>\n\t\t\t\t</span>\n\t\t\t\t<span mbr-if=\"showBrand\" mbr-buttons mbr-theme-style=\"display-4\" class=\"navbar-caption-wrap\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove,-iconFont\"><a class=\"navbar-caption text-white\" data-app-selector=\".navbar-caption\" href=\"index.html\" data-app-placeholder=\"Type Text\">2Kings Asphalt</a></span>\n\t\t\t</div>\n\t\t\t<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems || showIcons || showButtons\">\n\t\t\t\t<div class=\"hamburger\">\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<span></span>\n\t\t\t\t</div>\n\t\t\t</button>\n\t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\" mbr-if=\"showItems || showIcons || showButtons\">\n\t\t\t\t<ul mbr-menu class=\"navbar-nav nav-dropdown\" mbr-theme-style=\"display-7\" mbr-if=\"showItems\" mbr-class=\"{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish && !showBrand && !showLogo}\"><li class=\"nav-item\">\n\t\t\t\t\t\t<a class=\"nav-link link text-white text-primary\" href=\"maintenance-plans.html\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" aria-expanded=\"false\">Maintenance</a>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"nav-item\">\n\t\t\t\t\t\t<a class=\"nav-link link text-white\" href=\"index.html\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">Contact</a>\n\t\t\t\t\t</li><li class=\"nav-item\"><a class=\"nav-link link text-white\" href=\"tel:251-610-2755\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\"><strong>251-610-2755</strong></a></li></ul>\n\t\t\t\t<div class=\"icons-menu\" mbr-if=\"showIcons\">\n\t\t\t\t\t<a class=\"iconfont-wrapper\" href=\"https://mobiri.se\">\n\t\t\t\t\t\t<span mbr-icon class=\"p-2 mbr-iconfont mobi-mbri-phone mobi-mbri\"></span>\n\t\t\t\t\t</a>\n\t\t\t\t\t<a class=\"iconfont-wrapper\" href=\"https://mobiri.se\" mbr-if=\"iconsAmount > 1\">\n\t\t\t\t\t\t<span mbr-icon class=\"p-2 mbr-iconfont mobi-mbri-letter mobi-mbri\"></span>\n\t\t\t\t\t</a>\n\t\t\t\t\t<a class=\"iconfont-wrapper\" href=\"https://mobiri.se\" mbr-if=\"iconsAmount > 2\">\n\t\t\t\t\t\t<span mbr-icon class=\"p-2 mbr-iconfont mobi-mbri-map-pin mobi-mbri\"></span>\n\t\t\t\t\t</a>\n\t\t\t\t\t<a class=\"iconfont-wrapper\" href=\"https://mobiri.se\" mbr-if=\"iconsAmount > 3\">\n\t\t\t\t\t\t<span mbr-icon class=\"p-2 mbr-iconfont mobi-mbri-shopping-cart mobi-mbri\"></span>\n\t\t\t\t\t</a>\n\t\t\t\t</div>\n\t\t\t\t<div mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" class=\"navbar-buttons mbr-section-btn\"><a class=\"btn btn-primary\" href=\"tel:251-610-2755\" data-app-placeholder=\"Type Text\">Get Started</a></div>\n\t\t\t</div>\n\t\t</div>\n\t</nav>\n</section>",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"menu menu2\" group=\"Menu\" plugins=\"DropDown, TouchSwipe\" always-top global once=\"menu\" not-draggable position-absolute>\n\t<mbr-parameters>\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Logo\" name=\"showLogo\" checked>\n\t\t<input type=\"range\" title=\"Logo Size\" inline name=\"logoSize\" min=\"1\" max=\"5\" step=\"0.1\" value=\"5\" condition=\"showLogo\">\n\t\t<input type=\"checkbox\" title=\"Brand Name\" name=\"showBrand\" checked>\n\t\t<input type=\"checkbox\" title=\"Menu Items\" name=\"showItems\" checked>\n\t\t<select title=\"Menu Items Align\" name=\"contentAlign\" condition=\"showItems\">\n\t\t\t<option value=\"1\">Left</option>\n\t\t\t<option value=\"2\" selected>Center</option>\n\t\t\t<option value=\"3\">Right</option>\n\t\t</select>\n\t\t<input type=\"checkbox\" title=\"Icons\" name=\"showIcons\">\n\t\t<select title=\"Amount\" name=\"iconsAmount\" condition=\"showIcons\">\n\t\t\t<option value=\"1\">1</option>\n\t\t\t<option value=\"2\">2</option>\n\t\t\t<option value=\"3\" selected>3</option>\n\t\t\t<option value=\"4\">4</option>\n\t\t</select>\n\t\t<input type=\"color\" title=\"Icons Color\" name=\"iconsColor\" value=\"#000000\" condition=\"showIcons\">\n\t\t<input type=\"checkbox\" title=\"Button\" name=\"showButtons\" checked>\n\t\t<header>Styles</header>\n\t\t<input type=\"checkbox\" title=\"Collapsed\" name=\"collapsed\">\n\t\t<input type=\"checkbox\" title=\"Transparent\" name=\"transparent\" checked>\n\t\t<input type=\"checkbox\" title=\"Sticky\" name=\"sticky\" checked>\n\t\t<input type=\"range\" title=\"Opacity\" name=\"opacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"transparent\">\n\t\t<input type=\"color\" title=\"Color\" name=\"menuBgColor\" value=\"#232323\">\n\t\t<input type=\"color\" title=\"Hamburger\" name=\"hamburgerColor\" value=\"#ffffff\">\n\t</mbr-parameters>\n\n\t<nav class=\"navbar navbar-dropdown\" mbr-class=\"{'navbar-fixed-top':sticky,\n                     'navbar-expand-lg':!collapsed,\n                     'collapsed':collapsed}\">\n\t\t<div class=\"container\">\n\t\t\t<div class=\"navbar-brand\">\n\t\t\t\t<span mbr-if=\"showLogo\" class=\"navbar-logo\">\n\t\t\t\t\t<a href=\"index.html\">\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/newarc_ai_gr_qicvlsqo2ylnlfgqzsihyfpehclps5y5-1232x848.jpg\" alt=\"2 Kings Asphalt\" mbr-style=\"{'height': logoSize + 'rem'}\">\n\t\t\t\t\t</a>\n\t\t\t\t</span>\n\t\t\t\t<span mbr-if=\"showBrand\" mbr-buttons mbr-theme-style=\"display-4\" class=\"navbar-caption-wrap\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove,-iconFont\"><a class=\"navbar-caption text-white\" data-app-selector=\".navbar-caption\" href=\"index.html\" data-app-placeholder=\"Type Text\">2Kings Asphalt</a></span>\n\t\t\t</div>\n\t\t\t<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems || showIcons || showButtons\">\n\t\t\t\t<div class=\"hamburger\">\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<span></span>\n\t\t\t\t</div>\n\t\t\t</button>\n\t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\" mbr-if=\"showItems || showIcons || showButtons\">\n\t\t\t\t<ul mbr-menu class=\"navbar-nav nav-dropdown\" mbr-theme-style=\"display-7\" mbr-if=\"showItems\" mbr-class=\"{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish && !showBrand && !showLogo}\"><li class=\"nav-item\">\n\t\t\t\t\t\t<a class=\"nav-link link text-white\" href=\"index.html\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">Asphalt</a>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"nav-item\">\n\t\t\t\t\t\t<a class=\"nav-link link text-white text-primary\" href=\"maintenance-plans.html\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" aria-expanded=\"false\">Maintenance</a>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"nav-item\">\n\t\t\t\t\t\t<a class=\"nav-link link text-white\" href=\"index.html\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">Contact</a>\n\t\t\t\t\t</li><li class=\"nav-item\"><a class=\"nav-link link text-white\" href=\"tel:251-610-2755\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\"><strong>251-610-2755</strong></a></li></ul>\n\t\t\t\t<div class=\"icons-menu\" mbr-if=\"showIcons\">\n\t\t\t\t\t<a class=\"iconfont-wrapper\" href=\"https://mobiri.se\">\n\t\t\t\t\t\t<span mbr-icon class=\"p-2 mbr-iconfont mobi-mbri-phone mobi-mbri\"></span>\n\t\t\t\t\t</a>\n\t\t\t\t\t<a class=\"iconfont-wrapper\" href=\"https://mobiri.se\" mbr-if=\"iconsAmount > 1\">\n\t\t\t\t\t\t<span mbr-icon class=\"p-2 mbr-iconfont mobi-mbri-letter mobi-mbri\"></span>\n\t\t\t\t\t</a>\n\t\t\t\t\t<a class=\"iconfont-wrapper\" href=\"https://mobiri.se\" mbr-if=\"iconsAmount > 2\">\n\t\t\t\t\t\t<span mbr-icon class=\"p-2 mbr-iconfont mobi-mbri-map-pin mobi-mbri\"></span>\n\t\t\t\t\t</a>\n\t\t\t\t\t<a class=\"iconfont-wrapper\" href=\"https://mobiri.se\" mbr-if=\"iconsAmount > 3\">\n\t\t\t\t\t\t<span mbr-icon class=\"p-2 mbr-iconfont mobi-mbri-shopping-cart mobi-mbri\"></span>\n\t\t\t\t\t</a>\n\t\t\t\t</div>\n\t\t\t\t<div mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" class=\"navbar-buttons mbr-section-btn\"><a class=\"btn btn-primary\" href=\"tel:251-610-2755\" data-app-placeholder=\"Type Text\">Get Started</a></div>\n\t\t\t</div>\n\t\t</div>\n\t</nav>\n</section>",
           "_name": "menu02",
           "_sourceTheme": "startm5",
           "_cid": "umqFTz6x9J",
@@ -2799,6 +2799,7 @@
         {
           "alias": false,
           "_styles": {
+            "display": "flex",
             "& when not (@fullScreen)": {
               "padding-top": "(@paddingTop * 1rem)",
               "padding-bottom": "(@paddingBottom * 1rem)"
@@ -2807,7 +2808,36 @@
               "background-color": "@bg-value"
             },
             "& when (@bg-type = \"image\")": {
-              "background-image": "url(@bg-value)"
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            "@media (min-width: 768px)": {
+              "align-items": "~\"@{verticalAlign}\"",
+              ".row": {
+                "justify-content": "~\"@{horizontalAlign}\""
+              },
+              ".content-wrap": {
+                "padding": "1rem 3rem"
+              }
+            },
+            "@media (max-width: 991px) and (min-width: 768px)": {
+              ".content-wrap": {
+                "min-width": "50%"
+              }
+            },
+            "@media (max-width: 767px)": {
+              "-webkit-align-items": "center",
+              "align-items": "~\"@{verticalAlign}\"",
+              ".mbr-row": {
+                "-webkit-justify-content": "center",
+                "justify-content": "center"
+              },
+              ".content-wrap": {
+                "width": "100%"
+              }
             },
             ".mbr-fallback-image.disabled": {
               "display": "none"
@@ -2820,36 +2850,77 @@
               "height": "100%",
               "position": "absolute",
               "top": "0",
-              "& when (@bg-type = 'video')": {
+              "& when (@bg-type = \"video\")": {
                 "background-image": "url(@fallBackImage)"
               }
             },
-            ".card-wrapper": {
-              "background": "@wrapBgColor",
-              "@media (max-width: 767px)": {
-                "padding": "2rem 1.5rem"
-              },
-              "@media (min-width: 768px) and (max-width: 991px)": {
-                "padding": "2.25rem"
-              },
-              "@media (min-width: 992px)": {
-                "padding": "4rem"
-              }
+            ".mbr-section-title, .mbr-section-subtitle": {
+              "text-align": "left",
+              "color": "#ffc091"
             },
             ".mbr-text, .mbr-section-btn": {
-              "color": "#000000",
               "text-align": "left"
             },
-            ".card-title, .card-box": {
-              "text-align": "left",
-              "color": "#000000"
+            ".mbr-section-title": {
+              "color": "#ffffff",
+              "text-align": "center"
             }
           },
-          "_name": "article07",
+          "_name": "header18",
           "_sourceTheme": "startm5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article07\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"9\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"8\">\n    <input type=\"range\" inline title=\"Content Width\" name=\"contentWidth\" min=\"8\" max=\"12\" step=\"1\" value=\"10\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n    <input type=\"color\" title=\"Wrap Bg\" name=\"wrapBgColor\" value=\"#ffffff\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/mbr-1920x1280.jpg\" parallax selected>\n      <input type=\"color\" title=\"Color\" value=\"#edefeb\">\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.2\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"card col-md-12 col-lg-{{contentWidth}}\">\n        <div class=\"card-wrapper\">\n          <h3 class=\"card-title mbr-fonts-style mbr-white mt-3 mb-4\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-box\"><b>Maintenance</b></h3>\n          <div class=\"row card-box align-left\">\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\">\n                  <b>Maintenance options</b>\n                </h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Maintain a Cleaning Schedule\n<br>\n<br>Maintaining a cleaning schedule for your lot removes dirt and debris that would otherwise accumulate. Leaves, trash, and other debris create the right conditions for standing water which will ultimately weaken and deteriorate your lot. If you are noticing standing water in your lot, you may have other concerns that are creating the issue. Checking your drains for blockages regularly allows you to prevent long-term problems. It is best to sweep your lot regularly to keep it clean and uncover developing problems.<br>\n<br>One of the main culprits of asphalt failure is spillage from leaky engines.   If you ever wonder why the asphalt seems to have a low spot in parking spaces this is caused by car fluids leaking.  This can cause permanent damage to your lot. Chemical compounds in oil and gasoline eat away at the “glue” that holds asphalt together. This can lead to rapid deterioration; it is best to remove these as soon as they are noticed with dish soap or another oil-destroying agent. Regular cleaning of your lots will help keep them in the best condition for years to come with minimal repairs.<br>\n<br>One of the main culprits of asphalt failure is spillage from leaky engines.   If you ever wonder why the asphalt seems to have a low spot in parking spaces this is caused by car fluids leaking.  This can cause permanent damage to your lot. Chemical compounds in oil and gasoline eat away at the “glue” that holds asphalt together. This can lead to rapid deterioration; it is best to remove these as soon as they are noticed with dish soap or another oil-destroying agent. Regular cleaning of your lots will help keep them in the best condition for years to come with minimal repairs.<br>\n<br>Weather conditions, heavy use, tree roots and vegetation can result in cracks in the surface of your parking lot. While small cracks do not necessarily indicate a major issue, they should be handled immediately to prevent them from worsening. Filling small cracks as needed is much easier and cheaper than repairing a large surface break or pothole.<br>\n<br>During the winter months, the freeze-thaw cycle will cause any water that has seeped into existing cracks to freeze and expand, causing larger problems. Repairing cracks as they appear allows you to keep water and other chemicals from inside your asphalt, decreasing the need for larger repair. Stay ahead of larger repairs by repairing cracks as you see them. Rather than waiting for a sealcoat or full repave.<br>\n<br>From Driveways to Parking lots&nbsp;<b>2Kings Asphalt </b>has a plan for you!&nbsp; &nbsp;</p>\n              </div>\n            </div>\n            \n            \n            \n          </div>\n          <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n            <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Start Now</a>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
-          "_cid": "umvgcSxxKs",
-          "_anchor": "article07-5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"header18\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen, 'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"24\" step=\"1\" value=\"20\" condition=\"fullScreen == false\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"12\" step=\"1\" value=\"4\" condition=\"fullScreen == false\">\n    <input type=\"range\" inline title=\"Content Width\" name=\"contentWidth\" min=\"3\" max=\"12\" step=\"1\" value=\"12\">\n    <header>Show / Hide</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\">\n    <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n    <select title=\"Vertical Align\" name=\"verticalAlign\" condition=\"fullScreen\">\n      <option value=\"flex-start\">Top</option>\n      <option value=\"center\">Center</option>\n      <option value=\"flex-end\" selected>Bottom</option>\n    </select>\n    <select title=\"Horizontal Align\" name=\"horizontalAlign\">\n      <option value=\"flex-start\" selected>Left</option>\n      <option value=\"center\">Center</option>\n      <option value=\"flex-end\">Right</option>\n    </select>\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/pxl_20230725_172826745.mp~3-1280x630.jpg\" parallax selected>\n      <input type=\"video\" title=\"Video\" value=\"https://www.youtube.com/watch?v=2Gg6Seob5Mg\">\n      <input type=\"color\" title=\"Color\" value=\"#260a30\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type!='color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"bg.type!='color' && overlay\">\n    <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"bg.type!='color' && overlay\">\n  </mbr-parameters>\n\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row\">\n      <div class=\"content-wrap col-12 col-md-{{contentWidth}}\">\n        <h1 class=\"mbr-section-title mbr-fonts-style mbr-white mb-4\" mbr-theme-style=\"display-1\" data-app-selector=\".mbr-section-title\" mbr-if=\"showTitle\">\n          <b><br>Maintenance</b></h1>\n        <h2 class=\"mbr-section-subtitle mbr-fonts-style mbr-white mb-4\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-2\" mbr-if=\"showSubtitle\">\n          Header Subtitle\n        </h2>\n        <p class=\"mbr-fonts-style mbr-text mbr-white mb-4\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Full-width block with YouTube video background and flexible\n          configuration, free vertical and horizontal\n          content alignment.&nbsp;</p>\n        <div class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-7\"><a class=\"btn btn-white-outline\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Learn More</a></div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "umvnzkaIKi",
+          "_anchor": "header18-c",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "background-color": "@bgColor",
+            ".counter-container": {
+              "ol": {
+                "margin-bottom": "0",
+                "padding-left": "2.25rem",
+                "li": {
+                  "margin-bottom": "2rem",
+                  "list-style": "none",
+                  "position": "relative",
+                  "&:before": {
+                    "font-weight": "700",
+                    "position": "absolute",
+                    "left": "-1.5em",
+                    "counter-increment": "myCounter",
+                    "content": "counter(myCounter)",
+                    "transition": "all .2s",
+                    "color": "@iconColor",
+                    "display": "flex",
+                    "align-items": "center",
+                    "justify-content": "center"
+                  }
+                },
+                "counter-reset": "myCounter"
+              }
+            },
+            ".mbr-section-title": {
+              "text-align": "center"
+            },
+            ".mbr-section-subtitle": {
+              "text-align": "center"
+            },
+            ".mbr-text P": {
+              "text-align": "center"
+            }
+          },
+          "_name": "article17",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article17\" group=\"Article\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"10\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" value=\"8\" step=\"1\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showMainTitle\" checked>\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showMainSubtitle\" checked>\n    <input type=\"color\" name=\"iconColor\" title=\"Color\" value=\"#000000\">\n    <header>Background</header>\n    <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\">\n  </mbr-parameters>\n\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"counter-container col-md-12 col-lg-{{textWidth}}\">\n        <div class=\"row mb-5 justify-content-center\" mbr-if=\"showMainTitle || showMainSubtitle\">\n          <div class=\"col-12 content-head\">\n            <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-2\" mbr-if=\"showMainTitle\" data-app-selector=\".mbr-section-title\"><b>Maintain a Cleaning Schedule</b></h3>\n            <h5 class=\"mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4\" mbr-theme-style=\"display-7\" mbr-if=\"showMainSubtitle\" data-app-selector=\".mbr-section-subtitle\">From Driveways to Parking lots 2Kings Asphalt has a plan for you!&nbsp; &nbsp;</h5>\n          </div>\n        </div>\n        <div class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article>\n          <ol>\n            <li>Maintaining asphalt is crucial for extending its lifespan and ensuring it remains in good condition. Here’s a comprehensive checklist for asphalt maintenance:\n</li><li>\n</li>\n            <li><br></li><li>Sweeping: Regularly sweep debris off the pavement to prevent dirt from causing cracks.\n</li><li>Crack Repairs: Fill in cracks as soon as they appear using an asphalt repair patch.\n</li><li>Pothole Patching: Repair potholes promptly with a pothole repair kit to prevent further damage.\n</li><li>Power Washing: Pressure wash the asphalt to remove dirt and oil stains.\n</li><li>Sealing: Reseal the asphalt every two to five years to protect it from UV damage and water penetration.\n</li><li>Weed Removal: Remove weeds by hand-pulling or using vinegar before repairing any cracks.\n</li><li>Winterizing: Ensure the asphalt is sealed and in good condition before winter to prevent damage from freezing and thawing cycles.\n</li><li>Raveling: Check for disintegration of the asphalt surface and schedule repairs if needed.\n</li><li>Rutting: Avoid parking in the same spots repeatedly to prevent wheel indentations.\n</li><li>Discoloration: Replace old or damaged asphalt that appears dull or whiteish.\n</li><li>Grade Depressions: Check for areas that are not level and address any depressions.\n</li><li>By following these steps, you can keep your asphalt in top shape and avoid costly repairs12.<br><br></li></ol><p>Call: <b><a href=\"tel:251-610-2755\" class=\"text-black\">251-610-2755</a>&nbsp;</b>to schedule your Maintenance Plan with our professionals.</p><ol>\n          </ol>\n          <ol>\n          </ol>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "umvmi29S42",
+          "_anchor": "article17-b",
           "_protectedParams": [],
           "_global": false,
           "_once": false,

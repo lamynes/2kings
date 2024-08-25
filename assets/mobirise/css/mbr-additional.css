@@ -2107,51 +2107,6 @@ a {
 .cid-umqFTzdyKr .mbr-section-title {
   color: #ffffff;
 }
-.cid-umvgcSxxKs {
-  padding-top: 9rem;
-  padding-bottom: 8rem;
-  background-image: url("../../../assets/images/mbr-1920x1280.webp");
-}
-.cid-umvgcSxxKs .mbr-fallback-image.disabled {
-  display: none;
-}
-.cid-umvgcSxxKs .mbr-fallback-image {
-  display: block;
-  background-size: cover;
-  background-position: center center;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-}
-.cid-umvgcSxxKs .card-wrapper {
-  background: #ffffff;
-}
-@media (max-width: 767px) {
-  .cid-umvgcSxxKs .card-wrapper {
-    padding: 2rem 1.5rem;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .cid-umvgcSxxKs .card-wrapper {
-    padding: 2.25rem;
-  }
-}
-@media (min-width: 992px) {
-  .cid-umvgcSxxKs .card-wrapper {
-    padding: 4rem;
-  }
-}
-.cid-umvgcSxxKs .mbr-text,
-.cid-umvgcSxxKs .mbr-section-btn {
-  color: #000000;
-  text-align: left;
-}
-.cid-umvgcSxxKs .card-title,
-.cid-umvgcSxxKs .card-box {
-  text-align: left;
-  color: #000000;
-}
 .cid-umqFTz6x9J {
   z-index: 1000;
   width: 100%;
@@ -2715,6 +2670,106 @@ a {
   .cid-umqFTz6x9J .navbar-collapse {
     padding: 1rem;
   }
+}
+.cid-umvnzkaIKi {
+  display: flex;
+  padding-top: 20rem;
+  padding-bottom: 4rem;
+  background-image: url("../../../assets/images/pxl-20230725-172826745.mp3-1280x630.webp");
+}
+.cid-umvnzkaIKi .mbr-overlay {
+  background-color: #000000;
+  opacity: 0.5;
+}
+@media (min-width: 768px) {
+  .cid-umvnzkaIKi {
+    align-items: flex-end;
+  }
+  .cid-umvnzkaIKi .row {
+    justify-content: flex-start;
+  }
+  .cid-umvnzkaIKi .content-wrap {
+    padding: 1rem 3rem;
+  }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .cid-umvnzkaIKi .content-wrap {
+    min-width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .cid-umvnzkaIKi {
+    -webkit-align-items: center;
+    align-items: flex-end;
+  }
+  .cid-umvnzkaIKi .mbr-row {
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+  .cid-umvnzkaIKi .content-wrap {
+    width: 100%;
+  }
+}
+.cid-umvnzkaIKi .mbr-fallback-image.disabled {
+  display: none;
+}
+.cid-umvnzkaIKi .mbr-fallback-image {
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.cid-umvnzkaIKi .mbr-section-title,
+.cid-umvnzkaIKi .mbr-section-subtitle {
+  text-align: left;
+  color: #ffc091;
+}
+.cid-umvnzkaIKi .mbr-text,
+.cid-umvnzkaIKi .mbr-section-btn {
+  text-align: left;
+}
+.cid-umvnzkaIKi .mbr-section-title {
+  color: #ffffff;
+  text-align: center;
+}
+.cid-umvmi29S42 {
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  background-color: #ffffff;
+}
+.cid-umvmi29S42 .counter-container ol {
+  margin-bottom: 0;
+  padding-left: 2.25rem;
+  counter-reset: myCounter;
+}
+.cid-umvmi29S42 .counter-container ol li {
+  margin-bottom: 2rem;
+  list-style: none;
+  position: relative;
+}
+.cid-umvmi29S42 .counter-container ol li:before {
+  font-weight: 700;
+  position: absolute;
+  left: -1.5em;
+  counter-increment: myCounter;
+  content: counter(myCounter);
+  transition: all .2s;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cid-umvmi29S42 .mbr-section-title {
+  text-align: center;
+}
+.cid-umvmi29S42 .mbr-section-subtitle {
+  text-align: center;
+}
+.cid-umvmi29S42 .mbr-text P {
+  text-align: center;
 }
 .cid-umqFTzdyKr {
   padding-top: 5rem;
