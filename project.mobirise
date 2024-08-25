@@ -1172,6 +1172,67 @@
         },
         {
           "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = \"video\")": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".content-head": {
+              "max-width": "800px"
+            },
+            ".mbr-section-title": {
+              "color": "#000000"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#ffffff"
+            },
+            "img, .item-img": {
+              "& when not (@autoSize)": {
+                "width": "100%",
+                "height": "100%"
+              },
+              "& when (@autoSize)": {
+                "margin-left": "auto",
+                "margin-right": "auto",
+                "height": "200px",
+                "width": "200px",
+                "object-fit": "cover"
+              }
+            }
+          },
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"header12\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{ 'mbr-fullscreen': fullScreen, 'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"12\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"12\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\" checked>\n        <input type=\"checkbox\" title=\"Image\" name=\"showImage\" checked>\n        <input type=\"checkbox\" name=\"autoSize\" title=\"Auto Size\" condition=\"showImage\" checked>\n        <input type=\"range\" name=\"imageWidth\" title=\"Image Width\" min=\"4\" max=\"12\" step=\"1\" value=\"4\" condition=\"showImage && !autoSize\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#FFD100\">\n            <input type=\"video\" title=\"Video\" value=\"https://youtu.be/T1FYyZVQwtA\" selected>\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"@PROJECT_PATH@/assets/images/newarc_ai_gr_qicvlsqo2ylnlfgqzsihyfpehclps5y5-1232x848.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"text-center\" mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row mb-4 justify-content-center\" mbr-if=\"showImage\">\n            <div class=\"col-12 col-md-{{imageWidth}}\">\n                <a href=\"index.html\"><img src=\"@PROJECT_PATH@/assets/images/2kings-asphalt-paving-removebg-preview-400x400.png\" alt=\"2Kings Asphalt & Paving\"></a>\n            </div>\n        </div>\n        <div class=\"row justify-content-center\">\n            <div class=\"col-md-12 content-head\">\n                <h1 class=\"mbr-section-title mbr-fonts-style mb-4\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">\n                    <b data-app-selector=\".mbr-section-title\">Kick Asphalt with Us Today!</b>\n                </h1>\n                <p class=\"mbr-text mbr-fonts-style mb-4\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Transform your pavement dreams into reality with our expert services!</p>\n                <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn mt-4\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-primary\" href=\"tel:(251) 509-5108\" data-app-placeholder=\"Type Text\">Get Your Free Quote!</a></div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_name": "header12",
+          "_sourceTheme": "startm5",
+          "_cid": "umqFTzaUyR",
+          "_anchor": "call-to-action-8-umqFTzaUyR",
+          "alias": false,
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
             "padding-top": "(@paddingTop * 1rem)",
             "padding-bottom": "(@paddingBottom * 1rem)",
             "& when (@bg-type = \"color\")": {
@@ -1275,7 +1336,7 @@
               "max-width": "800px"
             }
           },
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"pricing1\" group=\"Pricing\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"4\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" name=\"showTitle\" title=\"Title\" checked>\n        <input type=\"checkbox\" name=\"showSubtitle\" title=\"Subtitle\">\n        <select title=\"Columns\" name=\"columns\">\n            <option value=\"6\">2</option>\n            <option value=\"4\">3</option>\n            <option value=\"3\" selected>4</option>\n        </select>\n        <header>Cards</header>\n        <input type=\"checkbox\" name=\"showCardTitle\" title=\"Title\" checked>\n        <input type=\"checkbox\" name=\"showCardSubtitle\" title=\"Subtitle\" checked>\n        <input type=\"checkbox\" name=\"showText\" title=\"Text\" checked>\n        <input type=\"checkbox\" name=\"showButtons\" title=\"Buttons\" checked>\n        <input type=\"color\" name=\"cardsHead\" title=\"Head\" value=\"@primaryColor\">\n        <input type=\"color\" name=\"cardsBg\" title=\"BG\" value=\"#ffffff\">\n        <header>Background</header>\n        <fieldset type=\"background\" parallax name=\"bg\" required>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Transparent\" name=\"transparentBg\" condition=\"bg.type === 'color'\" checked>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type == 'image'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type == 'image'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 content-head\">\n                <div class=\"mbr-section-head mb-5\" mbr-if=\"showTitle || showSubtitle\">\n                    <h4 class=\"mbr-section-title mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n                        <b>Pricing Plans</b>\n                    </h4>\n                    <h5 class=\"mbr-section-subtitle mbr-fonts-style align-center mt-4 mb-0\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n                    </h5>\n                </div>\n            </div>\n        </div>\n        <div class=\"row\">\n            <div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}} item-mb active\">\n                <div class=\"item-wrapper\">\n                    <div class=\"item-head\">\n                        <h5 class=\"item-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".item-title\" mbr-if=\"showCardTitle\">\n                            <b>Basic Paving</b>\n                        </h5>\n                        <h6 class=\"item-subtitle mbr-fonts-style mt-0 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".item-subtitle\" mbr-if=\"showCardSubtitle\">\n                            <b>$2,500</b>/One-Time\n                        </h6>\n                    </div>\n                    <div class=\"item-content\" mbr-if=\"showCardTitle || showCardSubtitle || showText || showButtons\">\n                        <p class=\"mbr-text mbr-fonts-style \" mbr-if=\"showText\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text, .mbr-section-btn\">Perfect for small driveways and residential projects. Smooth and stylish!</p>\n                    </div>\n                    <div class=\"mbr-section-btn item-footer \" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\" mbr-buttons mbr-theme-style=\"display-7\"><a href=\"index.html\" class=\"btn item-btn btn-primary\" data-app-placeholder=\"Type Text\">Choose This Plan</a></div>\n                </div>\n            </div>\n            <div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}} item-mb\">\n                <div class=\"item-wrapper\">\n                    <div class=\"item-head\">\n                        <h5 class=\"item-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".item-title\" mbr-if=\"showCardTitle\">\n                            <b>Commercial Masterpiece</b>\n                        </h5>\n                        <h6 class=\"item-subtitle mbr-fonts-style mt-0 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".item-subtitle\" mbr-if=\"showCardSubtitle\">\n                            <b>$10,000</b>/One-Time\n                        </h6>\n                    </div>\n                    <div class=\"item-content\" mbr-if=\"showCardTitle || showCardSubtitle || showText || showButtons\">\n                        <p class=\"mbr-text mbr-fonts-style \" mbr-if=\"showText\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text, .mbr-section-btn\">Transform your business entrance with our premium paving services. First impressions matter!</p>\n                    </div>\n                    <div class=\"mbr-section-btn item-footer \" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\" mbr-buttons mbr-theme-style=\"display-7\"><a href=\"index.html\" class=\"btn item-btn btn-primary\" data-app-placeholder=\"Type Text\">Choose This Plan</a></div>\n                </div>\n            </div>\n\n            <div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}} item-mb\">\n                <div class=\"item-wrapper\">\n                    <div class=\"item-head\">\n                        <h5 class=\"item-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".item-title\" mbr-if=\"showCardTitle\">\n                            <b>Maintenance Magic</b>\n                        </h5>\n                        <h6 class=\"item-subtitle mbr-fonts-style mt-0 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".item-subtitle\" mbr-if=\"showCardSubtitle\">\n                            <b>$1,000</b>/One-Time\n                        </h6>\n                    </div>\n                    <div class=\"item-content\" mbr-if=\"showCardTitle || showCardSubtitle || showText || showButtons\">\n                        <p class=\"mbr-text mbr-fonts-style \" mbr-if=\"showText\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text, .mbr-section-btn\">Keep your asphalt looking brand new with our maintenance services. Because who likes cracks?</p>\n                    </div>\n                    <div class=\"mbr-section-btn item-footer \" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\" mbr-buttons mbr-theme-style=\"display-7\"><a href=\"index.html\" class=\"btn item-btn btn-primary\" data-app-placeholder=\"Type Text\">Choose This Plan</a></div>\n                </div>\n            </div>\n\n            <div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}} item-mb\">\n                <div class=\"item-wrapper\">\n                    <div class=\"item-head\">\n                        <h5 class=\"item-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".item-title\" mbr-if=\"showCardTitle\">\n                            <b>Custom Solutions</b>\n                        </h5>\n                        <h6 class=\"item-subtitle mbr-fonts-style mt-0 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".item-subtitle\" mbr-if=\"showCardSubtitle\">\n                            <b>Varies</b>/One-Time\n                        </h6>\n                    </div>\n                    <div class=\"item-content\" mbr-if=\"showCardTitle || showCardSubtitle || showText || showButtons\">\n                        <p class=\"mbr-text mbr-fonts-style \" mbr-if=\"showText\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text, .mbr-section-btn\">Tailored paving solutions for unique projects. Let’s make your vision a reality!</p>\n                    </div>\n                    <div class=\"mbr-section-btn item-footer \" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\" mbr-buttons mbr-theme-style=\"display-7\"><a href=\"index.html\" class=\"btn item-btn btn-primary\" data-app-placeholder=\"Type Text\">Choose This Plan</a></div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"pricing1\" group=\"Pricing\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"4\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" name=\"showTitle\" title=\"Title\" checked>\n        <input type=\"checkbox\" name=\"showSubtitle\" title=\"Subtitle\">\n        <select title=\"Columns\" name=\"columns\">\n            <option value=\"6\">2</option>\n            <option value=\"4\">3</option>\n            <option value=\"3\" selected>4</option>\n        </select>\n        <header>Cards</header>\n        <input type=\"checkbox\" name=\"showCardTitle\" title=\"Title\" checked>\n        <input type=\"checkbox\" name=\"showCardSubtitle\" title=\"Subtitle\" checked>\n        <input type=\"checkbox\" name=\"showText\" title=\"Text\" checked>\n        <input type=\"checkbox\" name=\"showButtons\" title=\"Buttons\" checked>\n        <input type=\"color\" name=\"cardsHead\" title=\"Head\" value=\"@primaryColor\">\n        <input type=\"color\" name=\"cardsBg\" title=\"BG\" value=\"#ffffff\">\n        <header>Background</header>\n        <fieldset type=\"background\" parallax name=\"bg\" required>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Transparent\" name=\"transparentBg\" condition=\"bg.type === 'color'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type == 'image'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type == 'image'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 content-head\">\n                <div class=\"mbr-section-head mb-5\" mbr-if=\"showTitle || showSubtitle\">\n                    <h4 class=\"mbr-section-title mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n                        <b>Pricing Plans</b>\n                    </h4>\n                    <h5 class=\"mbr-section-subtitle mbr-fonts-style align-center mt-4 mb-0\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n                    </h5>\n                </div>\n            </div>\n        </div>\n        <div class=\"row\">\n            <div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}} item-mb active\">\n                <div class=\"item-wrapper\">\n                    <div class=\"item-head\">\n                        <h5 class=\"item-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".item-title\" mbr-if=\"showCardTitle\">\n                            <b>Basic Paving</b>\n                        </h5>\n                        <h6 class=\"item-subtitle mbr-fonts-style mt-0 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".item-subtitle\" mbr-if=\"showCardSubtitle\">\n                            <b>$2,500</b>/One-Time\n                        </h6>\n                    </div>\n                    <div class=\"item-content\" mbr-if=\"showCardTitle || showCardSubtitle || showText || showButtons\">\n                        <p class=\"mbr-text mbr-fonts-style \" mbr-if=\"showText\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text, .mbr-section-btn\">Perfect for small driveways and residential projects. Smooth and stylish!</p>\n                    </div>\n                    <div class=\"mbr-section-btn item-footer \" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\" mbr-buttons mbr-theme-style=\"display-7\"><a href=\"index.html\" class=\"btn item-btn btn-primary\" data-app-placeholder=\"Type Text\">Choose This Plan</a></div>\n                </div>\n            </div>\n            <div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}} item-mb\">\n                <div class=\"item-wrapper\">\n                    <div class=\"item-head\">\n                        <h5 class=\"item-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".item-title\" mbr-if=\"showCardTitle\">\n                            <b>Commercial Masterpiece</b>\n                        </h5>\n                        <h6 class=\"item-subtitle mbr-fonts-style mt-0 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".item-subtitle\" mbr-if=\"showCardSubtitle\">\n                            <b>$10,000</b>/One-Time\n                        </h6>\n                    </div>\n                    <div class=\"item-content\" mbr-if=\"showCardTitle || showCardSubtitle || showText || showButtons\">\n                        <p class=\"mbr-text mbr-fonts-style \" mbr-if=\"showText\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text, .mbr-section-btn\">Transform your business entrance with our premium paving services. First impressions matter!</p>\n                    </div>\n                    <div class=\"mbr-section-btn item-footer \" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\" mbr-buttons mbr-theme-style=\"display-7\"><a href=\"index.html\" class=\"btn item-btn btn-primary\" data-app-placeholder=\"Type Text\">Choose This Plan</a></div>\n                </div>\n            </div>\n\n            <div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}} item-mb\">\n                <div class=\"item-wrapper\">\n                    <div class=\"item-head\">\n                        <h5 class=\"item-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".item-title\" mbr-if=\"showCardTitle\">\n                            <b>Maintenance Magic</b>\n                        </h5>\n                        <h6 class=\"item-subtitle mbr-fonts-style mt-0 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".item-subtitle\" mbr-if=\"showCardSubtitle\">\n                            <b>$1,000</b>/One-Time\n                        </h6>\n                    </div>\n                    <div class=\"item-content\" mbr-if=\"showCardTitle || showCardSubtitle || showText || showButtons\">\n                        <p class=\"mbr-text mbr-fonts-style \" mbr-if=\"showText\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text, .mbr-section-btn\">Keep your asphalt looking brand new with our maintenance services. Because who likes cracks?</p>\n                    </div>\n                    <div class=\"mbr-section-btn item-footer \" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\" mbr-buttons mbr-theme-style=\"display-7\"><a href=\"index.html\" class=\"btn item-btn btn-primary\" data-app-placeholder=\"Type Text\">Choose This Plan</a></div>\n                </div>\n            </div>\n\n            <div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}} item-mb\">\n                <div class=\"item-wrapper\">\n                    <div class=\"item-head\">\n                        <h5 class=\"item-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".item-title\" mbr-if=\"showCardTitle\">\n                            <b>Custom Solutions</b>\n                        </h5>\n                        <h6 class=\"item-subtitle mbr-fonts-style mt-0 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".item-subtitle\" mbr-if=\"showCardSubtitle\">\n                            <b>Varies</b>/One-Time\n                        </h6>\n                    </div>\n                    <div class=\"item-content\" mbr-if=\"showCardTitle || showCardSubtitle || showText || showButtons\">\n                        <p class=\"mbr-text mbr-fonts-style \" mbr-if=\"showText\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text, .mbr-section-btn\">Tailored paving solutions for unique projects. Let’s make your vision a reality!</p>\n                    </div>\n                    <div class=\"mbr-section-btn item-footer \" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\" mbr-buttons mbr-theme-style=\"display-7\"><a href=\"index.html\" class=\"btn item-btn btn-primary\" data-app-placeholder=\"Type Text\">Choose This Plan</a></div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
           "_name": "pricing01",
           "_sourceTheme": "startm5",
           "_cid": "umqFTz7JtX",
@@ -1380,205 +1441,6 @@
           "_sourceTheme": "startm5",
           "_cid": "umqFTz99pH",
           "_anchor": "gallery-12-umqFTz99pH",
-          "alias": false,
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "& when (@bg-type = \"color\")": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = \"image\")": {
-              "background-image": "url(@bg-value)"
-            },
-            ".mbr-fallback-image.disabled": {
-              "display": "none"
-            },
-            ".item-wrapper": {
-              "margin-top": "2rem",
-              "margin-bottom": "2rem"
-            },
-            ".mbr-fallback-image": {
-              "display": "block",
-              "background-size": "cover",
-              "background-position": "center center",
-              "width": "100%",
-              "height": "100%",
-              "position": "absolute",
-              "top": "0",
-              "& when (@bg-type = \"video\")": {
-                "background-image": "url(@fallBackImage)"
-              }
-            },
-            ".mbr-iconfont": {
-              "display": "inline-flex",
-              "font-size": "2rem",
-              "color": "@iconColor",
-              "width": "80px",
-              "justify-content": "center",
-              "align-items": "center",
-              "background": "@iconbg",
-              "height": "80px",
-              "border-radius": "50%"
-            },
-            ".card-title, .iconfont-wrapper, .card-text": {
-              "color": "#000000",
-              "text-align": "center"
-            },
-            ".content-head": {
-              "max-width": "800px"
-            },
-            ".mbr-section-title": {
-              "color": "#000000"
-            },
-            ".mbr-section-btn": {
-              "text-align": "center"
-            },
-            ".card-title, .iconfont-wrapper": {
-              "color": "#FFEE32"
-            }
-          },
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"features10\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"3\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"3\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showMainTitle\">\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showMainSubtitle\">\n    <header>Card</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Icons\" name=\"showIcon\">\n\t<input type=\"checkbox\" name=\"showButtons\" title=\"Buttons\">\n    <input type=\"color\" title=\"Icon Color\" name=\"iconColor\" value=\"#d70081\" selected condition=\"showIcon\">\n    <input type=\"color\" title=\"Icon BG\" name=\"iconbg\" value=\"#ffd7ef\" selected condition=\"showIcon\">\n    <select title=\"Columns\" name=\"columns\">\n      <option value=\"12\">1</option>\n      <option value=\"6\">2</option>\n      <option value=\"4\" selected>3</option>\n      <option value=\"3\">4</option>\n    </select>\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n      <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center mb-5\" mbr-if=\"showMainTitle || showMainSubtitle\">\n      <div class=\"col-12 mb-0 content-head\">\n        <h3 class=\"mbr-section-title mbr-fonts-style align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showMainTitle\" data-app-selector=\".mbr-section-title\">\n          <b>Features with icons</b>\n        </h3>\n        <p class=\"mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4\" mbr-theme-style=\"display-7\" mbr-if=\"showMainSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n          List main features of your project in this block\n        </p>\n      </div>\n    </div>\n    <div class=\"row justify-content-center\">\n      <div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}}\">\n        <div class=\"item-wrapper\">\n          <div class=\"card-box align-left\">\n            <div class=\"iconfont-wrapper mb-3\" mbr-if=\"showIcon\">\n              <span mbr-icon class=\"mbr-iconfont mobi-mbri-idea mobi-mbri\"></span>\n            </div>\n            <p class=\"card-title mbr-fonts-style mb-3\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .iconfont-wrapper\">\n              <b>2</b>\n            </p>\n            <p class=\"card-text mbr-fonts-style mb-3\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text, .mbr-section-btn\">Kings of Asphalt</p>\n            <div class=\"mbr-section-btn mt-2 item-footer mt-2\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\" mbr-buttons mbr-theme-style=\"display-7\">\n              <a href class=\"btn btn-primary item-btn\" data-app-placeholder=\"Type Text\">Learn More</a>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}}\">\n        <div class=\"item-wrapper\">\n          <div class=\"card-box align-left\">\n            <div class=\"iconfont-wrapper mb-3\" mbr-if=\"showIcon\">\n              <span mbr-icon class=\"mbr-iconfont mobi-mbri-growing-chart mobi-mbri\"></span>\n            </div>\n            <p class=\"card-title mbr-fonts-style mb-3\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .iconfont-wrapper\">\n              <b>100%</b>\n            </p>\n            <p class=\"card-text mbr-fonts-style mb-3\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text, .mbr-section-btn\">Satisfaction Guaranteed</p>\n            <div class=\"mbr-section-btn mt-2 item-footer mt-2\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\" mbr-buttons mbr-theme-style=\"display-7\">\n              <a href class=\"btn btn-primary item-btn\" data-app-placeholder=\"Type Text\">Learn More</a>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}}\">\n        <div class=\"item-wrapper\">\n          <div class=\"card-box align-left\">\n            <div class=\"iconfont-wrapper mb-3\" mbr-if=\"showIcon\">\n              <span mbr-icon class=\"mbr-iconfont mobi-mbri-change-style mobi-mbri\"></span>\n            </div>\n            <p class=\"card-title mbr-fonts-style mb-3\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .iconfont-wrapper\">\n              <b>24/7</b>\n            </p>\n            <p class=\"card-text mbr-fonts-style mb-3\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text, .mbr-section-btn\">Service Anytime</p>\n            <div class=\"mbr-section-btn mt-2 item-footer mt-2\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\" mbr-buttons mbr-theme-style=\"display-7\">\n              <a href class=\"btn btn-primary item-btn\" data-app-placeholder=\"Type Text\">Learn More</a>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
-          "_name": "features010",
-          "_sourceTheme": "startm5",
-          "_cid": "umqFTz9Gng",
-          "_anchor": "metrics-2-umqFTz9Gng",
-          "alias": false,
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "_styles": {
-            "& when not (@fullScreen)": {
-              "padding-top": "(@paddingTop * 1rem)",
-              "padding-bottom": "(@paddingBottom * 1rem)"
-            },
-            "& when (@bg-type = \"image\")": {
-              "background-image": "url(@bg-value)"
-            },
-            "& when (@bg-type = \"color\")": {
-              "background-color": "@bg-value"
-            },
-            ".mbr-fallback-image.disabled": {
-              "display": "none"
-            },
-            ".mbr-fallback-image": {
-              "display": "block",
-              "background-size": "cover",
-              "background-position": "center center",
-              "width": "100%",
-              "height": "100%",
-              "position": "absolute",
-              "top": "0",
-              "& when (@bg-type = \"video\")": {
-                "background-image": "url(@fallBackImage)"
-              }
-            },
-            ".content-head": {
-              "max-width": "800px"
-            },
-            ".mbr-section-title": {
-              "color": "#000000"
-            },
-            ".mbr-text, .mbr-section-btn": {
-              "color": "#000000"
-            },
-            "img, .item-img": {
-              "& when not (@autoSize)": {
-                "width": "100%",
-                "height": "100%"
-              },
-              "& when (@autoSize)": {
-                "margin-left": "auto",
-                "margin-right": "auto",
-                "height": "200px",
-                "width": "200px",
-                "object-fit": "cover"
-              }
-            }
-          },
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"header12\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{ 'mbr-fullscreen': fullScreen, 'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"12\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"12\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\" checked>\n        <input type=\"checkbox\" title=\"Image\" name=\"showImage\" checked>\n        <input type=\"checkbox\" name=\"autoSize\" title=\"Auto Size\" condition=\"showImage\" checked>\n        <input type=\"range\" name=\"imageWidth\" title=\"Image Width\" min=\"4\" max=\"12\" step=\"1\" value=\"4\" condition=\"showImage && !autoSize\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#FFD100\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"text-center\" mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row mb-4 justify-content-center\" mbr-if=\"showImage\">\n            <div class=\"col-12 col-md-{{imageWidth}}\">\n                <a href=\"index.html\"><img src=\"@PROJECT_PATH@/assets/images/2kings-asphalt-paving-removebg-preview-400x400.png\" alt=\"2Kings Asphalt & Paving\"></a>\n            </div>\n        </div>\n        <div class=\"row justify-content-center\">\n            <div class=\"col-md-12 content-head\">\n                <h1 class=\"mbr-section-title mbr-fonts-style mb-4\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">\n                    <b data-app-selector=\".mbr-section-title\">Kick Asphalt with Us Today!</b>\n                </h1>\n                <p class=\"mbr-text mbr-fonts-style mb-4\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Transform your pavement dreams into reality with our expert services!</p>\n                <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn mt-4\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-primary\" href=\"tel:(251) 509-5108\" data-app-placeholder=\"Type Text\">Get Your Free Quote!</a></div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_name": "header12",
-          "_sourceTheme": "startm5",
-          "_cid": "umqFTzaUyR",
-          "_anchor": "call-to-action-8-umqFTzaUyR",
-          "alias": false,
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "_styles": {
-            "& when not (@fullScreen)": {
-              "padding-top": "(@paddingTop * 1rem)",
-              "padding-bottom": "(@paddingBottom * 1rem)"
-            },
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            ".mbr-fallback-image.disabled": {
-              "display": "none"
-            },
-            ".mbr-fallback-image": {
-              "display": "block",
-              "background-size": "cover",
-              "background-position": "center center",
-              "width": "100%",
-              "height": "100%",
-              "position": "absolute",
-              "top": "0",
-              "& when (@bg-type = 'video')": {
-                "background-image": "url(@fallBackImage)"
-              }
-            },
-            ".row": {
-              "flex-direction": "row-reverse"
-            },
-            ".mbr-description": {
-              "color": "#ffffff"
-            }
-          },
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"image3\" group=\"Images & Videos\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n    <input type=\"range\" name=\"textWidth\" title=\"Image\" min=\"4\" max=\"12\" step=\"1\" value=\"9\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n      <input type=\"color\" title=\"Color\" value=\"#232323\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"col-12 col-lg-{{textWidth}}\">\n        <h4 class=\"mbr-description mbr-fonts-style mb-3 align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-description\">\n          <b>Paving Perfection Awaits</b>\n        </h4>\n        <p class=\"mbr-description mbr-fonts-style mb-4 align-center\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-description\">Your asphalt dreams are just a call away!</p>\n        <div class=\"image-wrapper\">\n          <img class=\"w-100\" src=\"@PROJECT_PATH@/assets/images/photo-1658077907668-9fe9a19050bb.jpeg\" alt=\"Mobirise Website Builder\">\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
-          "_name": "image03",
-          "_sourceTheme": "startm5",
-          "_cid": "umqFTzazS8",
-          "_anchor": "image-2-umqFTzazS8",
-          "alias": false,
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "background-color": "@bgColor",
-            ".mbr-section-title": {
-              "text-align": "center",
-              "color": "#000000"
-            },
-            ".mbr-section-subtitle": {
-              "text-align": "center",
-              "color": "#000000"
-            }
-          },
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article14\" group=\"Article\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" value=\"10\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Quote\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Author\" name=\"showSubtitle\">\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\">\n    </mbr-parameters>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-md-12 col-lg-{{textWidth}}\">\n                <h3 class=\"mbr-section-title mbr-fonts-style\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-7\">\n                    <span data-app-selector=\".mbr-section-title\"><b>Welcome to 2Kings Asphalt and Paving</b>, where we don’t just lay asphalt, we lay down the law! Whether you’re looking to pave your driveway or maintain your commercial lot, we’ve got the skills and the sass to get the job done right. Based in the sunny paradise of Mobile, Alabama, and serving the beautiful Baldwin County, we’re your go-to asphalt warriors. Our team is dedicated to providing top-notch services that will leave your pavement looking as good as new. So, why settle for mediocre when you can have the best? Let’s kick some asphalt together!</span>\n                </h3>\n                <p class=\"mbr-section-subtitle mbr-fonts-style mt-4\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-7\">\n                    Andrea F.\n                </p>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_name": "article14",
-          "_sourceTheme": "startm5",
-          "_cid": "umqFTzas9D",
-          "_anchor": "generic-text-10-umqFTzas9D",
           "alias": false,
           "_protectedParams": [],
           "_global": false,
