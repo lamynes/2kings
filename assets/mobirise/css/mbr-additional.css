@@ -2733,7 +2733,11 @@ a {
 }
 .cid-umvnzkaIKi .mbr-section-title {
   color: #ffffff;
-  text-align: center;
+  text-align: left;
+}
+.cid-umvnzkaIKi .mbr-section-subtitle {
+  text-align: left;
+  color: #ffffff;
 }
 .cid-umvmi29S42 {
   padding-top: 5rem;
