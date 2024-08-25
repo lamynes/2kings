@@ -1745,7 +1745,7 @@ a {
 .cid-umqFTzb9N5 {
   padding-top: 5rem;
   padding-bottom: 3rem;
-  background-color: transparent;
+  background-color: #ffffff;
 }
 .cid-umqFTzb9N5 .mbr-fallback-image.disabled {
   display: none;
@@ -1826,7 +1826,7 @@ a {
 .cid-umqFTzccqz {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: transparent;
+  background-color: #ffffff;
 }
 .cid-umqFTzccqz .mbr-iconfont {
   font-size: 1.2rem !important;
@@ -1918,7 +1918,7 @@ a {
 .cid-umqFTzcSdS {
   padding-top: 6rem;
   padding-bottom: 6rem;
-  background-color: transparent;
+  background-color: #232323;
 }
 .cid-umqFTzcSdS .mbr-overlay {
   background-color: #ffffff;
@@ -1938,6 +1938,9 @@ a {
 }
 .cid-umqFTzcSdS .content-head {
   max-width: 800px;
+}
+.cid-umqFTzcSdS .mbr-section-title {
+  color: #ffffff;
 }
 .cid-umqFTzcIKg .main_wrapper {
   position: relative;
@@ -1975,7 +1978,7 @@ a {
 }
 .cid-umqFTzcIKg .item-wrapper {
   height: 100%;
-  background-color: rgba(35, 35, 35, 0.58);
+  background-color: rgba(35, 35, 35, 0.79);
   pointer-events: fill;
   padding: 2.25rem;
 }
@@ -2035,6 +2038,9 @@ a {
 .cid-umqFTzcIKg .list,
 .cid-umqFTzcIKg .item-wrap {
   color: #ffffff;
+}
+.cid-umqFTzcIKg .cardTitle {
+  color: #ffa600;
 }
 .cid-umqFTzdyKr {
   padding-top: 5rem;
