@@ -2673,13 +2673,11 @@ a {
 }
 .cid-umvnzkaIKi {
   display: flex;
-  padding-top: 20rem;
-  padding-bottom: 4rem;
   background-image: url("../../../assets/images/pxl-20230725-172826745.mp3-1280x630.webp");
 }
 .cid-umvnzkaIKi .mbr-overlay {
   background-color: #000000;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 @media (min-width: 768px) {
   .cid-umvnzkaIKi {
