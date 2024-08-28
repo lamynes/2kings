@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "2Kings Asphalt and Paving",
-    "currentPage": "maintenance-plans.html",
+    "currentPage": "index.html",
     "ai": {
       "prompt": "We are 2Kings Asphalt and Paving, Kick Asphalt!! We offer Commercial and Residential Asphalt Paving and Asphalt Maintenance Services in Mobile, Alabama & Baldwin County, Alabama. ",
       "imageSearchQuery": "asphalt"
@@ -263,9 +263,9 @@
     "imageResize": true,
     "screenshot": "screenshot.png",
     "publishChangesOnly": true,
-    "favicon": false,
+    "favicon": "@PROJECT_PATH@/assets/images/newarc-ai-gr-qicvlsqo2ylnlfgqzsihyfpehclps5y5-removebg-preview-128x88_2.png",
     "usedWebp": true,
-    "mbrsiteDomain": "mfg9zjqovx",
+    "mbrsiteDomain": "ijrnyn8q1o",
     "robotsSwitcher": false,
     "sitemapSwitcher": false,
     "sitemapSwitcherAuto": false,
