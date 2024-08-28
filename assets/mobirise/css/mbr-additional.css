@@ -1547,6 +1547,9 @@ a {
     object-fit: cover;
   }
 }
+.cid-umwDiHchh5 .row {
+  flex-direction: row-reverse;
+}
 .cid-umqFTz7JtX {
   padding-top: 5rem;
   padding-bottom: 4rem;
@@ -1837,7 +1840,7 @@ a {
 .cid-umqFTzccqz {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: #ffffff;
+  background-image: url("../../../assets/images/366337064-122098679354004340-8307019816316284419-n-1506x1265.webp");
 }
 .cid-umqFTzccqz .mbr-iconfont {
   font-size: 1.2rem !important;
