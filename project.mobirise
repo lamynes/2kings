@@ -265,14 +265,15 @@
     "publishChangesOnly": true,
     "favicon": false,
     "usedWebp": true,
-    "mbrsiteDomain": "izktez3iif",
+    "mbrsiteDomain": "4rjvoubm3w",
     "robotsSwitcher": false,
     "sitemapSwitcher": true,
     "sitemapSwitcherAuto": "on",
     "siteUrl": "https://2kingsasphalt.com/",
     "cookiesAlert": false,
     "gdpr": false,
-    "robotsText": "User-agent: *\r\nDisallow: /cgi-bin\r\n"
+    "robotsText": "User-agent: *\r\nDisallow: /cgi-bin\r\n",
+    "google-analytics": "<!-- Google tag (gtag.js) -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-147R75YW33\"></script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-147R75YW33');\n</script>"
   },
   "pages": {
     "index.html": {
