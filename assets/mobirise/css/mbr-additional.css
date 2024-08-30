@@ -1845,7 +1845,6 @@ a {
 .cid-umqFTzb9N5 {
   padding-top: 5rem;
   padding-bottom: 3rem;
-  background-color: #ffffff;
 }
 .cid-umqFTzb9N5 .mbr-fallback-image.disabled {
   display: none;
@@ -1858,6 +1857,7 @@ a {
   height: 100%;
   position: absolute;
   top: 0;
+  background-image: url("../../../assets/images/newarc-ai-gr-qicvlsqo2ylnlfgqzsihyfpehclps5y5-1232x807.webp");
 }
 .cid-umqFTzb9N5 .item-mb {
   margin-bottom: 2rem;
@@ -1899,10 +1899,10 @@ a {
   border-radius: 50%;
 }
 .cid-umqFTzb9N5 .mbr-section-title {
-  color: #232323;
+  color: #ffffff;
 }
 .cid-umqFTzb9N5 .mbr-section-subtitle {
-  color: #232323;
+  color: #ffffff;
 }
 .cid-umqFTzb9N5 .card-box {
   display: flex;
@@ -1928,7 +1928,7 @@ a {
 .cid-umqFTzccqz {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-image: url("../../../assets/images/366337064-122098679354004340-8307019816316284419-n-1506x1265.webp");
+  background-color: #ffffff;
 }
 .cid-umqFTzccqz .mbr-iconfont {
   font-size: 1.2rem !important;
