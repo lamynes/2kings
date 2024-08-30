@@ -31,7 +31,7 @@ body {
   font-size: 8rem;
 }
 .display-2 {
-  font-family: 'Onest', sans-serif;
+  font-family: 'Inter Tight', sans-serif;
   font-size: 4rem;
   line-height: 1;
 }
@@ -1454,10 +1454,6 @@ a {
 .cid-umqFTz64cv .mbr-text {
   color: #000000;
 }
-.cid-umqFTzaUyR {
-  padding-top: 6rem;
-  padding-bottom: 5rem;
-}
 .cid-umqFTzaUyR .mbr-fallback-image.disabled {
   display: none;
 }
@@ -1475,7 +1471,7 @@ a {
   max-width: 800px;
 }
 .cid-umqFTzaUyR .mbr-section-title {
-  color: #000000;
+  color: #ffffff;
 }
 .cid-umqFTzaUyR .mbr-text,
 .cid-umqFTzaUyR .mbr-section-btn {
@@ -1543,7 +1539,7 @@ a {
   color: #000000;
 }
 .cid-umwDiHchh5 .mbr-section-title {
-  color: #000000;
+  color: #ffffff;
   text-align: center;
 }
 .cid-umwDiHchh5 .mbr-number {
