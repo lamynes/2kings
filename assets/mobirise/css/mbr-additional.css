@@ -1638,7 +1638,11 @@ a {
 .cid-umqFTz7JtX {
   padding-top: 5rem;
   padding-bottom: 4rem;
-  background-color: #ffffff;
+  background-image: url("../../../assets/images/blog-1-asphalt-cement-concrete-1000x666.webp");
+}
+.cid-umqFTz7JtX .mbr-overlay {
+  background: #000000;
+  opacity: 0.2;
 }
 .cid-umqFTz7JtX .item-mb {
   margin-bottom: 2rem;
@@ -1726,7 +1730,7 @@ a {
   }
 }
 .cid-umqFTz7JtX .mbr-section-title {
-  color: #000000;
+  color: #ffffff;
 }
 .cid-umqFTz7JtX .mbr-section-subtitle {
   color: #ffffff;
