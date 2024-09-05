@@ -2816,11 +2816,6 @@ a {
 }
 .cid-umvnzkaIKi {
   display: flex;
-  background-image: url("../../../assets/images/pxl-20230725-172826745.mp3-1280x630.webp");
-}
-.cid-umvnzkaIKi .mbr-overlay {
-  background-color: #000000;
-  opacity: 0.1;
 }
 @media (min-width: 768px) {
   .cid-umvnzkaIKi {
@@ -2862,6 +2857,7 @@ a {
   height: 100%;
   position: absolute;
   top: 0;
+  background-image: url("../../../assets/images/background1.webp");
 }
 .cid-umvnzkaIKi .mbr-section-title,
 .cid-umvnzkaIKi .mbr-section-subtitle {
